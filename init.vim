@@ -72,6 +72,23 @@ let g:NERDTrimTrailingWhitespace = 1
 " Enable NERDCommenterToggle to check all selected lines is commented or not 
 let g:NERDToggleCheckAllLines = 1
 
+"for NERDTree
+" close display []
+let g:NERDTreeGitStatusConcealBrackets = 1
+let g:NERDTreeGitStatusUseNerdFonts = 1
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+                \ 'Modified'  :'x',
+                \ 'Staged'    :'+',
+                \ 'Untracked' :'-',
+                \ 'Renamed'   :'r',
+                \ 'Unmerged'  :'═',
+                \ 'Deleted'   :'d',
+                \ 'Dirty'     :'✗',
+                \ 'Ignored'   :'☒',
+                \ 'Clean'     :'✔︎',
+                \ 'Unknown'   :'?',
+                \ }
+
 " Enable FZF preview window
 let g:fzf_preview_window="right:60%"
 
