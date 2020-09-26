@@ -16,6 +16,7 @@ Plug 'connorholyday/vim-snazzy'
 
 " vim 下方的状态栏
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " vim 注释插件
 Plug 'preservim/nerdcommenter'
@@ -29,15 +30,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " 剪切板扩展
 Plug 'junegunn/vim-peekaboo'
 
-" vim 自动关闭引号及括号
-Plug 'Raimondi/delimitMate'
-
-" 自动匹配括号
-Plug 'jiangmiao/auto-pairs'
-
-" 高亮复制
-" Plug 'machakann/vim-highlightedyank' " use coc-yank
-
 " 代码补全框架
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
@@ -47,14 +39,17 @@ Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
-" for vim-highlightedyank
-" let g:highlightedyank_highlight_duration=200
-" highlight HighlightedyankRegion cterm=NONE ctermbg=255 ctermfg=8
-
 " for vim-snazzy
 " set cursorline " 高亮当前行没有透明
 let g:SnazzyTransparent=1 " for alpha
 color snazzy
+
+" for vim-airline
+let g:airline_theme = "molokai"
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#fromatter = 'default'
 
 " for rainbow
 let g:rainbow_active=1
@@ -69,7 +64,7 @@ let g:NERDDefaultAlign = 'left'
 " Set a language to use its alternate delimiters by default
 let g:NERDAltDelims_java = 1
 " Add your own custom formats or override the defaults
-let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' }, 'java': { 'left': '/**', 'right': '*/'} }
 " Allow commenting and inverting empty lines (useful when commenting a region)
 let g:NERDCommentEmptyLines = 1
 " Enable trimming of trailing whitespace when uncommenting
@@ -131,19 +126,8 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" show documentation in preview window.
-nnoremap <silent> <LEADER>x :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-    if (index(['vim','help'], &filetype) >= 0)
-        execute 'h '.expand('<cword>')
-    else
-        call CocAction('doHover')
-    endif
-endfunction
-
 " Highlight the symbol and its references when holding the cursor.
-" autocmd CursorHold * silent call CocActionAsync('highlight')
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
@@ -231,6 +215,8 @@ set wildmenu
 set t_Co=256
 set nocompatible
 set showcmd
+set list
+set listchars=tab:\|\ ,trail:×
 set number
 set relativenumber
 set scrolloff=5
@@ -263,47 +249,16 @@ set nospell
 
 " map settings{{{
 
-" colemak basekey {{{
-
-
-" noremap <silent> n j
-" noremap <silent> e k
-" noremap <silent> i l
-" noremap <silent> gu gk
-" noremap <silent> ge gj
-
-
-" undo
-" noremap l u
-
-" insert mode
-" noremap k i
-" noremap K I
-
-" move
-"
-" 
-
-" fnoremast move
-" noremap <slient> U 5k
-" noremap <slient> E 5j
-" noremap <slient> N ^
-" noremap <slient> I $
-" 
-" noremap <slient> W 5w
-" noremap <slient> B $
-" noremap <slient> I $
-" noremap <slient> I $
-
-" }}}
-
 " leader key
 let mapleader=" "
 
 " save
 noremap S :w<CR>
 
-" exit
+" close this buffer (don't close window)
+noremap E :bd<CR>
+
+" close this window (don't close buffer)
 noremap Q :q<CR>
 
 " source vimrc
@@ -314,11 +269,12 @@ nnoremap .vimrc :e $MYVIMRC<CR>
 
 " on insert mode, into calc.
 inoremap <C-p> <C-r>=
+
 " quick command
 noremap ; :
 
+" fzf search file
 noremap <LEADER>f :Files<CR>
-noremap <LEADER>b :Buffers<CR>
 
 " next/pre buffer
 nnoremap <C-j> :bn<CR>
