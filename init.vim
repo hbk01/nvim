@@ -56,7 +56,7 @@ let g:SnazzyTransparent=1 " for alpha
 color snazzy
 
 " for vim-airline
-let g:airline_theme = "molokai"
+let g:airline_theme = 'luna'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
