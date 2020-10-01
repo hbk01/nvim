@@ -1,8 +1,19 @@
 
 " vim-plug {{{
-if empty(glob('~/.config/nvim/autoload/plug.vim'))
-    silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+" vim-plug install location
+if has("nvim")
+    let plug_location = '~/.config/nvim/autoload/plug.vim'
+else
+    let plug_location = '~/.vim/autoload/plug.vim'
+endif
+
+" vim-plug download url.
+let plug_down_url = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+if empty(glob(plug_location))
+    " download vim-plug and source it.
+    silent !curl -fLo plug_location --create-dirs plug_down_url
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
@@ -77,17 +88,17 @@ let g:NERDToggleCheckAllLines = 1
 let g:NERDTreeGitStatusConcealBrackets = 1
 let g:NERDTreeGitStatusUseNerdFonts = 1
 let g:NERDTreeGitStatusIndicatorMapCustom = {
-                \ 'Modified'  :'x',
-                \ 'Staged'    :'+',
-                \ 'Untracked' :'-',
-                \ 'Renamed'   :'r',
-                \ 'Unmerged'  :'═',
-                \ 'Deleted'   :'d',
-                \ 'Dirty'     :'✗',
-                \ 'Ignored'   :'☒',
-                \ 'Clean'     :'✔︎',
-                \ 'Unknown'   :'?',
-                \ }
+            \ 'Modified'  :'x',
+            \ 'Staged'    :'+',
+            \ 'Untracked' :'-',
+            \ 'Renamed'   :'r',
+            \ 'Unmerged'  :'═',
+            \ 'Deleted'   :'d',
+            \ 'Dirty'     :'✗',
+            \ 'Ignored'   :'☒',
+            \ 'Clean'     :'✔︎',
+            \ 'Unknown'   :'?',
+            \ }
 
 " Enable FZF preview window
 let g:fzf_preview_window="right:60%"
@@ -279,7 +290,7 @@ noremap E :bd<CR>
 noremap Q :q<CR>
 
 " source vimrc
-noremap <LEADER>R :w<CR>:source $MYVIMRC<CR>
+noremap <LEADER>R :source $MYVIMRC<CR>
 
 " edit .vimrc file.
 nnoremap .vimrc :e $MYVIMRC<CR>
