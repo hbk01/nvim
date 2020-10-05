@@ -284,7 +284,7 @@ let mapleader=" "
 noremap S :w<CR>
 
 " close this buffer (don't close window)
-noremap E :bd<CR>
+noremap E :bd!<CR>
 
 " close this window (don't close buffer)
 noremap Q :q<CR>
