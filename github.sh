@@ -15,6 +15,7 @@ echo "199.232.68.133 gist.githubusercontent.com" >> /etc/hosts
 echo "199.232.68.133 user-images.githubusercontent.com" >> /etc/hosts
 echo "199.232.68.133 cloud.githubusercontent.com" >> /etc/hosts
 echo "199.232.68.133 camo.githubusercontent.com" >> /etc/hosts
+echo "199.232.68.133 api.github.com" >> /etc/hosts
 echo "199.232.68.133 avatars0.githubusercontent.com" >> /etc/hosts
 echo "199.232.68.133 avatars1.githubusercontent.com" >> /etc/hosts
 echo "199.232.68.133 avatars2.githubusercontent.com" >> /etc/hosts
