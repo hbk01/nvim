@@ -17,7 +17,6 @@
     "suggest.timeout": 1000,
     "suggest.noselect": false,
     "suggest.enablePreselect": true,
-    "suggest.numberSelect": true,
     "suggest.floatEnable": true,
     "java.home": "/usr/lib/jvm/java-11-openjdk/"
 }
