@@ -309,6 +309,9 @@ nnoremap <C-j> :bn<CR>
 nnoremap <C-k> :bp<CR>
 nnoremap <C-l> :buffers<CR>
 
+" press the Ctrl+g to open lazygit.
+nnoremap <C-g> :tabe<CR>:-tabmove<CR>:term lazygit<CR>a
+
 " goto last line and set cursorline on screen center.
 noremap G Gzz
 
