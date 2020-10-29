@@ -1,4 +1,4 @@
-# 我的 nvim 配置文件
+# 我的 (Neo)Vim 配置文件
 
 概览
 
@@ -14,22 +14,23 @@
     + [vim 自动关闭引号及括号 delimitMate](https://github.com/Raimondi/delimitMate)
     + [自动匹配括号 auto-pairs](https://github.com/jiangmiao/auto-pairs)
     + [代码补全框架 coc.nvim](https://github.com/neoclide/coc.nvim)
-        + coc-marketplace
-        + coc-highlight
-        + coc-yank
-        + coc-git
-        + coc-pairs
-        + coc-json
-        + coc-vimlsp
-        + coc-css
 
 此列表可能不会更新，所以具体安装了那些插件请查看[init.vim](./init.vim)
 
 # 使用
 
+### NeoVim (推荐)
+
 ```shell
-cd ~/.config
+cd $HOME/.config
 git clone https://github.com/hbk01/nvim
 ```
 
+### Vim
+
+```shell
+cd $HOME
+git clone https://github.com/hbk01/nvim .vim
+ln -s ~/.vim/init.vim .vimrc
+```
 
