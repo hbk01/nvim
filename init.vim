@@ -13,10 +13,14 @@ endif
 " vim-plug download url.
 let plug_down_url = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
+" download vim-plug and source it.
 if empty(glob(vim_plug_path))
-    " download vim-plug and source it.
-    silent !curl -fLo plug_location --create-dirs plug_down_url
-    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    execute "!" . "curl" . " -fLo " . vim_plug_path . " --create-dirs " . plug_down_url
+endif
+
+" install plugin
+if empty(glob(plugins_path))
+    autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
 call plug#begin(plugins_path)
@@ -318,8 +322,8 @@ nnoremap rtr :r !tr -c
 noremap <LEADER>f :Files<CR>
 
 " next/pre buffer
-nnoremap <C-j> :bn<CR>
-nnoremap <C-k> :bp<CR>
+nnoremap <C-n> :bn<CR>
+nnoremap <C-p> :bp<CR>
 nnoremap <C-l> :buffers<CR>
 
 " press the Ctrl+g to open lazygit.
