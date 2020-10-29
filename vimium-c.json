@@ -58,6 +58,7 @@
         "",
         "# 搜索框",
         "map : Vomnibar.activate                            # 显示多功能搜索框",
+        "map ; Vomnibar.activate                            # 显示多功能搜索框",
         "map <space>t Vomnibar.activate keyword=\"translate\" # 显示多功能搜索框(并进入Google翻译)",
         "map <space>sb Vomnibar.activate keyword=\"bing\"      # 显示多功能搜索框(并进入Bing搜索)",
         "map <space>ss Vomnibar.activate keyword=\"bing\"      # 显示多功能搜索框(并进入Bing搜索)",
@@ -113,5 +114,12 @@
         ""
     ],
     "searchUrl": "https://cn.bing.com/search?q=$s Bing",
-    "vimSync": true
+    "vimSync": true,
+    "vomnibarOptions": {
+        "actions": "",
+        "maxMatches": 6,
+        "queryInterval": 300,
+        "sizes": "77,3,44",
+        "styles": "mono-url"
+    }
 }
