@@ -111,14 +111,22 @@ let g:NERDTreeDirArrowCollapsible='-'
 " for coc {{{
 " auto install coc extensions
 let g:coc_global_extensions=[
-            \ 'coc-marketplace',
-            \ 'coc-highlight',
-            \ 'coc-yank',
+            \ 'coc-clangd',
+            \ 'coc-cmake',
+            \ 'coc-css',
+            \ 'coc-emmet',
             \ 'coc-git',
-            \ 'coc-pairs',
+            \ 'coc-go',
+            \ 'coc-highlight',
+            \ 'coc-java',
             \ 'coc-json',
+            \ 'coc-marketplace',
+            \ 'coc-pairs',
+            \ 'coc-snippets',
             \ 'coc-vimlsp',
-            \ 'coc-css']
+            \ 'coc-xml',
+            \ 'coc-yaml',
+            \ 'coc-yank']
 
 set hidden
 set updatetime=100
@@ -300,6 +308,9 @@ inoremap <C-p> <C-r>=
 
 " quick command
 noremap ; :
+
+nnoremap tr :!tr -c 
+nnoremap rtr :r !tr -c 
 
 " fzf search file
 noremap <LEADER>f :Files<CR>
