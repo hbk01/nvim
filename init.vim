@@ -3,21 +3,23 @@
 
 " vim-plug install location
 if has("nvim")
-    let plug_location = '~/.config/nvim/autoload/plug.vim'
+    let vim_plug_path = '~/.config/nvim/autoload/plug.vim'
+    let plugins_path = '~/.config/nvim/plugins/'
 else
-    let plug_location = '~/.vim/autoload/plug.vim'
+    let vim_plug_path = '~/.vim/autoload/plug.vim'
+    let plugins_path = '~/.vim/plugins/'
 endif
 
 " vim-plug download url.
 let plug_down_url = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-if empty(glob(plug_location))
+if empty(glob(vim_plug_path))
     " download vim-plug and source it.
     silent !curl -fLo plug_location --create-dirs plug_down_url
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-call plug#begin('~/.vim/plugged')
+call plug#begin(plugins_path)
 
 " 彩虹括号
 Plug 'luochen1990/rainbow'
