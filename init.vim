@@ -106,8 +106,6 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
             \ 'Unknown'   :'?',
             \ }
 
-" Enable FZF preview window
-let g:fzf_preview_window="right:60%"
 
 " for nerdtree
 nnoremap tt :NERDTreeToggle<CR>
@@ -318,8 +316,13 @@ noremap ; :
 nnoremap tr :!tr -c 
 nnoremap rtr :r !tr -c 
 
-" fzf search file
-noremap <LEADER>f :Files<CR>
+" Enable FZF preview window
+let g:fzf_preview_window="right:60%"
+" fzf
+noremap <LEADER>ff :Files<CR>
+noremap <LEADER>fm :Maps<CR>
+noremap <LEADER>fb :Buffers<CR>
+noremap <LEADER>fh :History<CR>
 
 " next/pre buffer
 nnoremap <C-n> :bn<CR>
