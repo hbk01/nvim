@@ -11,7 +11,7 @@ else
 endif
 
 " vim-plug download url.
-let plug_down_url = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+let plug_down_url = 'https://gitee.com/hbk01/vim-plug/raw/master/plug.vim'
 
 " download vim-plug and source it.
 if empty(glob(vim_plug_path))
@@ -53,6 +53,9 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 " 模糊查找工具
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+" fcitx5 auto switch zh_CN and EN
+Plug '520Matches/fcitx5.vim'
 
 call plug#end()
 
