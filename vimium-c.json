@@ -1,10 +1,11 @@
 {
     "name": "Vimium C",
-    "@time": "2020/10/24 下午2:32:19",
-    "time": 1603521139215,
+    "@time": "8/16/2021, 9:36:27 PM",
+    "time": 1629120987561,
     "environment": {
-        "extension": "1.86.2",
-        "platform": "linux"
+        "extension": "1.90.2",
+        "platform": "linux",
+        "chrome": 93
     },
     "exclusionRules": [],
     "grabBackFocus": true,
@@ -87,18 +88,20 @@
         "map Q restoreTab         # 恢复最近关闭的网页",
         "map x removeTab mayClose # 关闭标签页",
         "map X restoreTab         # 恢复最近关闭的网页",
-        "map ? showHelp           # 显示帮助"
+        "map ? showHelp           # 显示帮助",
+        ""
     ],
     "linkHintCharacters": "abcdefghijklmnopqrstuvwxyz",
     "linkHintNumbers": "abcdefghijklmnopqrstuvwxyz",
-    "newTabUrl": "https://cn.bing.com",
+    "newTabUrl": "https://google.com/",
     "scrollStepSize": 30,
     "searchEngines": [
-        "bi|bing: https://www.bing.com/search?q=%s Bing",
-        "tr|translate: https://translate.google.cn/#view=home&op=translate&sl=auto&tl=zh-CN&text=%s GoogleTranslate",
-        "gh|github: https://github.com/search?q=$s Github",
-        "gt|gitee: https://search.gitee.com/?type=repository&q=$s Gitee",
-        "ba|baidu: https://www.baidu.com/s?ie=utf-8&wd=%s Baidu",
+        "bing: https://www.bing.com/search?q=%s bing",
+        "translate: https://translate.google.cn/#view=home&op=translate&sl=auto&tl=zh-CN&text=%s GoogleTranslate",
+        "github: https://github.com/search?q=$s github",
+        "gitee: https://search.gitee.com/?type=repository&q=$s gitee",
+        "google: https://www.google.com/search?q=$s google",
+        "baidu: https://www.baidu.com/s?ie=utf-8&wd=%s baidu",
         "",
         "# More examples.",
         "#",
@@ -113,7 +116,7 @@
         "# qw: https://www.qwant.com/?q=%s Qwant",
         ""
     ],
-    "searchUrl": "https://cn.bing.com/search?q=$s Bing",
+    "searchUrl": "https://www.google.com/search?q=$s google",
     "vimSync": true,
     "vomnibarOptions": {
         "actions": "",
