@@ -15,12 +15,12 @@ let plug_down_url = 'https://gitee.com/hbk01/vim-plug/raw/master/plug.vim'
 
 " download vim-plug and source it.
 if empty(glob(vim_plug_path))
-    execute "!" . "curl" . " -fLo " . vim_plug_path . " --create-dirs " . plug_down_url
+    " execute '!' . 'curl' . ' -fLo ' . vim_plug_path . ' --create-dirs ' . plug_down_url
 endif
 
 " install plugin
 if empty(glob(plugins_path))
-    autocmd VimEnter * PlugInstall | source $MYVIMRC
+    " autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
 call plug#begin(plugins_path)
