@@ -1,0 +1,49 @@
+[submodule "plugins/coc.nvim"]
+	path = plugins/coc.nvim
+	url = https://github.com/neoclide/coc.nvim
+
+[submodule "plugins/rainbow"]
+    path = plugins/rainbow
+    url = https://github.com/luochen1990/rainbow
+
+[submodule "plugins/vim-snazzy"]
+    path = plugins/vim-snazzy
+    url = https://github.com/connorholyday/vim-snazzy
+
+[submodule "plugins/vim-airline"]
+    path = plugins/vim-airline
+    url = https://github.com/vim-airline/vim-airline
+
+[submodule "plugins/vim-airline-themes"]
+    path = plugins/vim-airline-themes
+    url = https://github.com/vim-airline/vim-airline-themes
+
+[submodule "plugins/nerdcommenter"]
+    path = plugins/nerdcommenter
+    url = https://github.com/preservim/nerdcommenter
+
+[submodule "plugins/nerdtree"]
+    path = plugins/nerdtree
+    url = https://github.com/scrooloose/nerdtree
+
+[submodule "plugins/nerdtree-git-plugin"]
+    path = plugins/nerdtree-git-plugin
+    url = https://github.com/Xuyuanp/nerdtree-git-plugin
+
+[submodule "plugins/vim-peekaboo"]
+    path = plugins/vim-peekaboo
+    url = https://github.com/junegunn/vim-peekaboo
+
+[submodule "plugins/fzf"]
+    path = plugins/fzf
+    url = https://github.com/junegunn/fzf
+
+[submodule "plugins/fzf.vim"]
+    path = plugins/fzf.vim
+    url = https://github.com/junegunn/fzf.vim
+
+[submodule "plugins/fcitx5.vim"]
+    path = plugins/fcitx5.vim
+    url = https://github.com/520Matches/fcitx5.vim
+
+
