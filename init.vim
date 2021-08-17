@@ -49,6 +49,8 @@ Plug 'junegunn/vim-peekaboo'
 
 " 代码补全框架
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+" 支持 json with comment 格式
+Plug 'neoclide/jsonc.vim'
 
 " 模糊查找工具
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
